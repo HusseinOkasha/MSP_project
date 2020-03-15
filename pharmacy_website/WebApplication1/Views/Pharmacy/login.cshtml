@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>login</title>
+</head>ad>
+<body>
+    <form method="post" action="Pharmacy/login_submit">
+        <div class="form-group">
+            <label> Pharmacy Email</label>
+            <input class="form-control" type="email" placeholder="pharmacy Email" name="mail">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password " name="password" class="form-control">
+        </div>
+        <button class="btn btn-primary" type="submit">submit</button>
+    </form>
+
+    </div>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+</body>
+</html>

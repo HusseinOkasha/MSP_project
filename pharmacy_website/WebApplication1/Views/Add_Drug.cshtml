@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add drugs</title>
+</head>
+<body>
+    @Html.Partial("NavBar")
+
+    <form class="form-inline mt-2" method="get" action="/Pharmacy/Add_Drug">
+        <div class="Add_Drug">
+            <div class="form-group">
+                Drug Name 
+                <input type="text" class="form-control mr-2" placeholder=" Enter drug name.." name="Drug_Name">
+                Quantity
+                <input type="text" class="form-control mr-2" placeholder=" Quantity.." name="Drug_Quantity">
+                Price
+                <input type="text" class="form-control mr-2" placeholder=" price" name="Drug_Price">
+
+            </div>
+            <button type="submit" class="btn btn-primary mb-2"> Add </button>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Insert_Drug</title>
+</head>
+
+
+<body>
+    @Html.Partial("NavBar")
+    <div class="searchbox">
+        <div class="form-group">
+            
+            <form action="/User/insert" method="get">
+
+                <input type="text" class="form-control mr-2" placeholder="Enter drug name"name="drugname">
+                <input type="number" class="form-control mr-2" placeholder="Enter quantity" name="quantity">
+                <input type="number" class="form-control mr-2" placeholder="Enter price"    name="Price">
+                <button class="btn btn-primary" type="submit">Add</button>
+                
+            </form>
+        </div>
+
+
+</body>
+</html>

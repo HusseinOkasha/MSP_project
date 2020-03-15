@@ -1,0 +1,55 @@
+﻿@using System.Data;
+@{
+    Layout = null;
+    DataTable ctable = (DataTable)ViewBag.table;
+    if (ctable == null)
+    {
+        ctable = new DataTable();
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchResult</title>
+</head>
+<body>
+    @Html.Partial("NavBar")
+    @Html.Partial("Search")
+    <div class="container-fluid"> 
+         
+
+        <table class="table table-bordered table-striped">
+            <thead <thead class="thead-dark">
+
+            <tr>
+                <th>pharmacy_name</th>
+                <th>Phone.no</th>
+                <th>Tele.</th>
+                <th>Address</th>
+               
+            </tr>
+              <thead>
+            @for (int i = 0; i < ctable.Rows.Count; i++)
+            {
+                <tr>
+                    <td>@ctable.Rows[i][1]</td>
+                    <td>@ctable.Rows[i][2]</td>
+                    <td>@ctable.Rows[i][3]</td>
+                    <td>@ctable.Rows[i][4]</td>
+
+                </tr>
+
+            }
+
+        </thead>
+    </div>
+</body>
+</html>
